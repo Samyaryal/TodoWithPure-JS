@@ -1,6 +1,7 @@
 const addButton = document.getElementById("addBtn");
 const ulElement = document.getElementById("mytodo");
 const myInput = document.getElementById("myInput");
+const deleteAll = document.getElementById("remove-all");
 
 addButton.addEventListener("click", function () {
   let newTodo = document.createElement("li")
@@ -29,6 +30,12 @@ addButton.addEventListener("click", function () {
   delButton.addEventListener("click", function () {
     ulElement.removeChild(newTodo)
   });
+
+  //Deleting all todos
+  deleteAll.addEventListener("click", function() {
+    document.querySelector("ul").innerHTML = " "; 
+  })
+
 
 })
 
